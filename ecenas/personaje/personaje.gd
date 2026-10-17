@@ -1,7 +1,7 @@
 extends CharacterBody2D
 signal personajes_muerto
-@onready var animacion: AnimatedSprite2D = $AnimatedSprite2D
-@onready var area_2d: Area2D = $Area2D
+@export var animacion: AnimatedSprite2D
+@export var area_2d: Area2D
 
 var _vel_mov: float = 100.0
 var _vel_jump: float = -300.0

@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://pha6ppbqkk3c" path="res://ecenas/bordes/bordes.tscn" id="1_pg3q4"]
 [ext_resource type="TileSet" uid="uid://yqbe5krk7f4h" path="res://tileset/mazmorra.tres" id="2_qfcr6"]
 [ext_resource type="PackedScene" uid="uid://6jvrreu22l6m" path="res://ecenas/personaje/personaje.tscn" id="3_0ruwa"]
+[ext_resource type="PackedScene" uid="uid://cs6x801w78ccv" path="res://ecenas/ContenedorMonedas/contenedor_monedas.tscn" id="3_12lsl"]
+[ext_resource type="PackedScene" uid="uid://bibjkxx6dhf6k" path="res://ecenas/Monedas/moneda.tscn" id="5_5xxhm"]
 
 [node name="Nivel1" type="Node2D" unique_id=1408723838]
 
@@ -16,5 +18,16 @@ tile_set = ExtResource("2_qfcr6")
 tile_map_data = PackedByteArray("AAD0//n/AAACAAMAAAD0//r/AAACAAMAAAD0//v/AAACAAMAAAD0//z/AAACAAMAAAD0//3/AAACAAMAAAD0//7/AAACAAMAAAD0////AAACAAMAAAD0/wAAAAACAAMAAAD0/wEAAAACAAMAAAD0/wIAAAACAAMAAAD2//n/AAACAAMAAAD2//r/AAACAAMAAAD2//v/AAACAAMAAAD2//z/AAACAAMAAAD2//3/AAACAAMAAAD///n/AAACAAMAAAD///r/AAACAAMAAAD///v/AAACAAMAAAD///z/AAACAAMAAAD///3/AAACAAMAAAD///7/AAACAAMAAAD/////AAACAAMAAAD//wAAAAACAAMAAAD//wEAAAACAAMAAAD+/wAAAAACAAMAAAD+////AAACAAMAAAD+//7/AAACAAMAAAD+//3/AAACAAMAAAD+//z/AAACAAMAAAD+//v/AAACAAMAAAD+//r/AAACAAMAAAD+//n/AAACAAMAAAABAPn/AAACAAMAAAABAPr/AAACAAMAAAABAPv/AAACAAMAAAABAPz/AAACAAMAAAAGAPn/AAACAAMAAAAGAPr/AAACAAMAAAAGAPv/AAACAAMAAAAGAPz/AAACAAMAAAAGAP3/AAACAAMAAAAGAP7/AAACAAMAAAAGAP//AAACAAMAAAAGAAAAAAACAAMAAAAGAAEAAAACAAMAAAAGAAIAAAACAAMAAAAGAAMAAAACAAMAAAAFAPn/AAACAAMAAAAFAPr/AAACAAMAAAAFAPv/AAACAAMAAAAFAPz/AAACAAMAAAAFAP3/AAACAAMAAAAFAP7/AAACAAMAAAAFAP//AAACAAMAAAAJAPn/AAACAAMAAAAJAPr/AAACAAMAAAAKAPn/AAACAAMAAAAKAPr/AAACAAMAAAAKAPv/AAACAAMAAAAKAPz/AAACAAMAAAAKAP3/AAACAAMAAAAKAP7/AAACAAMAAAAKAP//AAACAAMAAAD6//n/AAACAAMAAAD6//r/AAACAAMAAAD6//v/AAACAAMAAAD6//z/AAACAAMAAAD6//3/AAACAAMAAAD6//7/AAACAAMAAAD6////AAACAAMAAAD6/wAAAAACAAMAAAA=")
 tile_set = ExtResource("2_qfcr6")
 
+[node name="ContenedorMonedas" parent="." unique_id=660177914 instance=ExtResource("3_12lsl")]
+
+[node name="Moneda1" parent="ContenedorMonedas" unique_id=28155073 instance=ExtResource("5_5xxhm")]
+position = Vector2(18, 43)
+
+[node name="Moneda2" parent="ContenedorMonedas" unique_id=679470568 instance=ExtResource("5_5xxhm")]
+position = Vector2(200, 38)
+
+[node name="Moneda3" parent="ContenedorMonedas" unique_id=356825500 instance=ExtResource("5_5xxhm")]
+position = Vector2(-60, 75)
+
 [node name="Personaje" parent="." unique_id=1099182927 instance=ExtResource("3_0ruwa")]
-position = Vector2(-159, 44)
+position = Vector2(-200, 48)

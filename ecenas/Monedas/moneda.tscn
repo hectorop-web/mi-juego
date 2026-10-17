@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bibjkxx6dhf6k"]
+
+[ext_resource type="Texture2D" uid="uid://47o35pl1b7ou" path="res://assets/sprites/tileset_mazmorra.png" id="1_38yvt"]
+[ext_resource type="Script" uid="uid://cqwanqsp1yw4q" path="res://ecenas/Monedas/moneda.gd" id="1_52ikv"]
+[ext_resource type="AudioStream" uid="uid://c31k8lrprp1m7" path="res://assets/sonidos/sonido_moneda.wav" id="3_31ghc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38yvt"]
+atlas = ExtResource("1_38yvt")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oph6c"]
+radius = 8.0
+
+[node name="Moneda" type="Node2D" unique_id=28155073 node_paths=PackedStringArray("area_2d")]
+script = ExtResource("1_52ikv")
+area_2d = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=818550471]
+texture = SubResource("AtlasTexture_38yvt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=355695773]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1675751948]
+shape = SubResource("CircleShape2D_oph6c")
+
+[node name="SonidoMoneda" type="AudioStreamPlayer2D" parent="." unique_id=893669610]
+stream = ExtResource("3_31ghc")

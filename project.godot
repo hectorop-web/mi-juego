@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="mago-mazmorra"
+config/name="Plataformas-escambrosas"
 run/main_scene="uid://dlurygkkwum0m"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"

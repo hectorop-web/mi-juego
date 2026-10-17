@@ -9,8 +9,11 @@ size = Vector2(14, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oph6c"]
 size = Vector2(14, 16)
 
-[node name="Personaje" type="CharacterBody2D" unique_id=1099182927]
+[node name="Personaje" type="CharacterBody2D" unique_id=1099182927 node_paths=PackedStringArray("animacion", "area_2d")]
+collision_layer = 4
 script = ExtResource("1_gv4pl")
+animacion = NodePath("AnimatedSprite2D")
+area_2d = NodePath("Area2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1587138895]
 position = Vector2(0, -1)
@@ -21,6 +24,7 @@ sprite_frames = ExtResource("1_xi0pd")
 animation = &"run"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=734813061]
+collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=254339105]
